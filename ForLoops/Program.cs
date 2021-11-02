@@ -8,7 +8,7 @@ namespace ForLoops
         {
             for (int i = 1; i <= 100; i++)
             {
-                Console.WriteLine($"{i} * {i} = {i*i}");
+                Console.WriteLine($"{i} * {i} = {i * i}");
             }
 
         
