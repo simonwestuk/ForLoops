@@ -9,13 +9,12 @@ namespace ForLoops
             double x;
             double sum = 0;
             double max = 0;
-            double min = 0;
-            double mean = 0;
+            double min = 1000;
 
 
             for (int i = 1; i <= 10; i++)
             {
- 
+
                 do
                 {
                     Console.WriteLine($"Enter number {i}:");
@@ -29,15 +28,32 @@ namespace ForLoops
                     else //Valid
                     {
                         sum = sum + x;
+
+                        //max = x > max ? x : max;
+
+                        if (x > max)
+                        {
+                            max = x;
+                        }
+
+                        //min = x < min ? x : min;
+
+                        if (x < min)
+                        {
+                            min = x;
+                        }
                     }
 
                 } while (x < 1 && x > 1000);
 
-                //SUM, MIN, MAX, MEAN
-                Console.WriteLine($"Total is {sum}");
+
             }
 
-        
+            //SUM, MIN, MAX, MEAN
+            Console.WriteLine($"Total is {sum}");
+            Console.WriteLine($"Max is {max}");
+            Console.WriteLine($"Min is {min}");
+            Console.WriteLine($"Mean is {sum/10}");
         }
     }
 }
